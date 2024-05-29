@@ -1,0 +1,12 @@
+{
+    "src": "./src/tests/e2e/*.ts",
+    "browsers": ["chrome"],
+    "hostname": "localhost",
+    "skipJsErrors": true,
+    "appCommand": "npm run dev",
+    "appInitDelay": 100,
+    "screenshots": {
+        "path": "./screenshots",
+        "takeOnFails": true
+    }
+}
