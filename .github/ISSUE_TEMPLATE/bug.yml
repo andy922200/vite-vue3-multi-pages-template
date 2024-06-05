@@ -1,0 +1,47 @@
+name: Bug 回報
+description: 提交一個錯誤或問題 / Report a bug or issue
+title: BUG - Title
+labels: [bug]
+body:
+  - type: input
+    attributes:
+      label: 發生時間
+      description: 格式 YYYY-MM-DD HH:MM
+  - type: textarea
+    attributes:
+      label: 當前行為 / Current Behavior
+      description: 簡單描述做了什麼事情
+      render: markdown
+  - type: textarea
+    attributes:
+      label: 預期行為 / Expected Behavior
+      description: 簡單描述原本預期會發生什麼事情
+      render: markdown
+  - type: input
+    attributes:
+      label: 網站版本號 / Version
+      description: 位於網站下方
+  - type: textarea
+    attributes:
+      label: 平台環境
+      description: |
+        例:
+          - **作業系統**: Ubuntu 20.04
+          - **瀏覽器**: Chrome
+          - **瀏覽器版本**: 13.14.0
+      value: |
+        - 作業系統:
+        - 瀏覽器:
+        - 瀏覽器版本:
+      render: markdown
+  - type: input
+    attributes:
+      label: 網站錯誤碼 / Error Code
+  - type: textarea
+    attributes:
+      label: 其他補充 / Additional Information
+      description: |
+        任何連結、截圖或影片等補充訊息，都可以寫在這裡。
+        Any additional information, such as links, screenshots, or videos, can be written here.
+        提示：可以點擊此區域以突出顯示，然後拖入圖片或相關文件。
+        Tip: You can click this area to highlight it, and then drag in images or relevant files.
