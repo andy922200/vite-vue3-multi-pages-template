@@ -20,6 +20,5 @@
     },
     "types": ["vite/client", "@types/jest"]
   },
-  "include": ["env.d.ts", "src/**/*.vue", "src/**/*.ts", "src/**/*.d.ts", "vite.config.ts"],
-  "exclude": []
+  "include": ["env.d.ts", "src/**/*.vue", "src/**/*.ts", "src/**/*.d.ts", "vite.config.ts"]
 }
