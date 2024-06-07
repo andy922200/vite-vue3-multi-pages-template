@@ -5,6 +5,7 @@ import { resolve, dirname } from 'path'
 import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 import zipPack from 'vite-plugin-zip-pack'
+import svgLoader from 'vite-svg-loader'
 import { projectName, htmlFiles, port } from './vite.config.shared'
 
 // https://vitejs.dev/config/
@@ -15,6 +16,7 @@ export default defineConfig({
     VueI18nVitePlugin({
       include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
     }),
+    svgLoader(),
     Icons({
       autoInstall: true,
     }),

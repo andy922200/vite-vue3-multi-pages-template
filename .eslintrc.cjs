@@ -38,7 +38,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'vue/multi-word-component-names': 'off',
-    'import/no-unresolved': [2, { ignore: ['^@/'] }],
+    'import/no-unresolved': [2, { ignore: ['^@/', '^~icons'] }],
     'import/order': [
       'error',
       {
