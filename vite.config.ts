@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { resolve, dirname } from 'path'
 import Icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
+import topLevelAwait from 'vite-plugin-top-level-await'
 import zipPack from 'vite-plugin-zip-pack'
 import svgLoader from 'vite-svg-loader'
 import { projectName, htmlFiles, port } from './vite.config.shared'
@@ -13,6 +14,7 @@ export default defineConfig({
   base: `/${projectName}/`,
   plugins: [
     vue(),
+    topLevelAwait(),
     VueI18nVitePlugin({
       include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
     }),

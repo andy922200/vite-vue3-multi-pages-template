@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useInitApp } from '@/composables/useInitApp'
+import { useInitApp } from './composables/useInitApp'
 
 const { initApp } = useInitApp()
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watch, getCurrentInstance } from 'vue'
-import { useInitApp } from '@/composables/useInitApp'
 import { saveLocale } from '@/plugins/i18n/entry'
+import { useInitApp } from './composables/useInitApp'
 
 const { initApp, currentLocale } = useInitApp()
 const i18NInstance = getCurrentInstance()?.appContext?.config?.globalProperties?.$i18n
