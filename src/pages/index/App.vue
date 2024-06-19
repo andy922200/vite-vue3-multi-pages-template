@@ -12,31 +12,31 @@ initApp()
 </script>
 
 <template>
-  <header class="line-height[1.5] justify-center max-h-screen lg:flex lg:items-center">
+  <header class="line-height[1.5] max-h-screen justify-center lg:flex lg:items-center">
     <img
       alt="Vue logo"
-      class="block mx-auto mb-8 lg:mx-0 lg:mb-0 lg:mr-8 w-32 h-32"
-      src="@/assets/logo.svg"
+      class="mx-auto mb-8 block size-32 lg:mx-0 lg:mb-0 lg:mr-8"
+      src="@/assets/logo.svg?url"
     />
 
-    <div class="wrapper lg:flex lg:items-start lg:flex-wrap">
+    <div class="wrapper lg:flex lg:flex-wrap lg:items-start">
       <nav
-        class="w-full text-center mt-8 text-sm lg:text-left lg:-ml-4 lg:text-base lg:py-4 lg:mt-4"
+        class="mt-8 w-full text-center text-sm lg:-ml-4 lg:mt-4 lg:py-4 lg:text-left lg:text-base"
       >
         <RouterLink
-          class="inline-block px-4 border-l border-[var(--color-border)] first-of-type:border-0"
+          class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
           to="/"
         >
           Home
         </RouterLink>
         <RouterLink
-          class="inline-block px-4 border-l border-[var(--color-border)] first-of-type:border-0"
+          class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
           to="/about"
         >
           About
         </RouterLink>
         <a
-          class="inline-block px-4 border-l border-[var(--color-border)] first-of-type:border-0"
+          class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
           href="./owner"
           >Owner Page</a
         >

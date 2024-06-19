@@ -9,7 +9,7 @@ const { count, doubleCount } = storeToRefs(counterStore)
 <template>
   <main>
     <button
-      class="p-4 border border-gray-800 rounded hover:bg-red-300 hover:text-white"
+      class="rounded border border-gray-800 p-4 hover:bg-red-300 hover:text-white"
       @click="counterStore.increment"
     >
       Increment +

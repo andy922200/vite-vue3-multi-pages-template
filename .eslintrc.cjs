@@ -18,8 +18,10 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:tailwindcss/recommended',
     'plugin:prettier/recommended',
   ],
+  plugins: ['tailwindcss'],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -38,6 +40,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'vue/multi-word-component-names': 'off',
+    'tailwindcss/no-custom-classname': 'off',
     'import/no-unresolved': [2, { ignore: ['^@/', '^~icons'] }],
     'import/order': [
       'error',
