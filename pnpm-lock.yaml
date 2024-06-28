@@ -29,6 +29,9 @@ importers:
       sweetalert2:
         specifier: ^11.12.0
         version: 11.12.0
+      swiper:
+        specifier: ^11.1.4
+        version: 11.1.4
       vue:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
@@ -4207,6 +4210,10 @@ packages:
 
   sweetalert2@11.12.0:
     resolution: {integrity: sha512-Fe6sitTNReNdPF1q1w4uz1GAVv9acZff9Q7YILH5n6O/ti3MzwgfEA0aQ6tLjpy+O1NLXnZjUE//xrbluGXzJw==}
+
+  swiper@11.1.4:
+    resolution: {integrity: sha512-1n7kbYJB2dFEpUHRFszq7gys/ofIBrMNibwTiMvPHwneKND/t9kImnHt6CfGPScMHgI+dWMbGTycCKGMoOO1KA==}
+    engines: {node: '>= 4.7.0'}
 
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
@@ -9304,6 +9311,8 @@ snapshots:
       picocolors: 1.0.1
 
   sweetalert2@11.12.0: {}
+
+  swiper@11.1.4: {}
 
   symbol-tree@3.2.4: {}
 
