@@ -17,11 +17,11 @@ const getRequest = async ({
   isAbsolutePath: boolean
 }) => {
   try {
-    const { data } = isAbsolutePath
+    const res = isAbsolutePath
       ? await axios.get(url, { params })
       : await axiosInstance.get(url, { params })
 
-    return [data, null]
+    return [res, null]
   } catch (err) {
     return [null, err]
   }
@@ -37,11 +37,11 @@ const postRequest = async ({
   isAbsolutePath: boolean
 }) => {
   try {
-    const { data } = isAbsolutePath
+    const res = isAbsolutePath
       ? await axios.post(url, params)
       : await axiosInstance.post(url, params)
 
-    return [data, null]
+    return [res, null]
   } catch (err) {
     return [null, err]
   }
