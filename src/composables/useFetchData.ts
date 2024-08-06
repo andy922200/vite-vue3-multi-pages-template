@@ -1,5 +1,5 @@
-import axios from 'axios' // Original Axios
-import { ref } from 'vue'
+import axios, { AxiosResponse, AxiosRequestConfig } from 'axios' // Original Axios
+import { ref, Ref } from 'vue'
 import { axiosInstance } from '@/plugins/axios' // Custom Axios
 
 enum Method {
@@ -10,16 +10,18 @@ enum Method {
 const getRequest = async ({
   url,
   params,
+  config,
   isAbsolutePath,
 }: {
   url: string
-  params?: any
+  params?: Record<string, any>
+  config?: AxiosRequestConfig
   isAbsolutePath: boolean
-}) => {
+}): Promise<[AxiosResponse<any, any> | null, any]> => {
   try {
     const res = isAbsolutePath
       ? await axios.get(url, { params })
-      : await axiosInstance.get(url, { params })
+      : await axiosInstance.get(url, { ...config, params })
 
     return [res, null]
   } catch (err) {
@@ -29,17 +31,20 @@ const getRequest = async ({
 
 const postRequest = async ({
   url,
-  params,
+  data,
+  config,
   isAbsolutePath,
 }: {
   url: string
-  params?: any
+  data?: Record<string, any>
+  config?: AxiosRequestConfig
   isAbsolutePath: boolean
-}) => {
+  isOwnerPath?: boolean
+}): Promise<[AxiosResponse<any, any> | null, any]> => {
   try {
     const res = isAbsolutePath
-      ? await axios.post(url, params)
-      : await axiosInstance.post(url, params)
+      ? await axios.post(url, data, config)
+      : await axiosInstance.post(url, data, config)
 
     return [res, null]
   } catch (err) {
@@ -50,14 +55,19 @@ const postRequest = async ({
 export const useFetchData = async ({
   url,
   params,
+  data,
+  config,
   method,
-  isAbsolutePath,
+  isAbsolutePath = false,
 }: {
   url: string
-  params?: any
+  params?: Record<string, any>
+  data?: Record<string, any>
+  config?: AxiosRequestConfig
   method: Method
-  isAbsolutePath: boolean
-}) => {
+  isAbsolutePath?: boolean
+  isOwnerPath?: boolean
+}): Promise<{ isFetching: Ref<boolean>; result: [AxiosResponse<any, any> | null, any] }> => {
   const isFetching = ref(false)
 
   try {
@@ -66,7 +76,7 @@ export const useFetchData = async ({
     const [res, err] =
       method === Method.GET
         ? await getRequest({ url, params, isAbsolutePath })
-        : await postRequest({ url, params, isAbsolutePath })
+        : await postRequest({ url, data, config, isAbsolutePath })
 
     return {
       isFetching,
