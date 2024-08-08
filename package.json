@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@vueform/multiselect": "^2.6.9",
     "@vueuse/core": "^10.10.0",
     "axios": "^1.7.2",
     "dayjs": "^1.11.11",

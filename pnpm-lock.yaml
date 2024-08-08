@@ -14,6 +14,9 @@ importers:
       '@intlify/unplugin-vue-i18n':
         specifier: ^4.0.0
         version: 4.0.0(rollup@4.18.0)(vue-i18n@10.0.0-beta.1(vue@3.4.27(typescript@5.4.5)))
+      '@vueform/multiselect':
+        specifier: ^2.6.9
+        version: 2.6.9
       '@vueuse/core':
         specifier: ^10.10.0
         version: 10.10.0(vue@3.4.27(typescript@5.4.5))
@@ -1590,6 +1593,9 @@ packages:
       typescript:
         optional: true
 
+  '@vueform/multiselect@2.6.9':
+    resolution: {integrity: sha512-eW+pMaWFGnK+WGvUPcB/mEwLx/5Y4VB8wRFGFQZ9c5Wi+K/xFrm/nQ/NbtrFQUcX0nbuQWKYnFBmwa5MENGQxw==}
+
   '@vueuse/core@10.10.0':
     resolution: {integrity: sha512-vexJ/YXYs2S42B783rI95lMt3GzEwkxzC8Hb0Ndpd8rD+p+Lk/Za4bd797Ym7yq4jXqdSyj3JLChunF/vyYjUw==}
 
@@ -2307,9 +2313,9 @@ packages:
     resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==}
     engines: {node: '>= 0.4'}
 
-  esbuild-wasm@0.21.5:
-    resolution: {integrity: sha512-L/FlOPMMFtw+6qPAbuPvJXdrOYOp9yx/PEwSrIZW0qghY4vgV003evdYDwqQ/9ENMQI0B6RMod9xT4FHtto6OQ==}
-    engines: {node: '>=12'}
+  esbuild-wasm@0.23.0:
+    resolution: {integrity: sha512-6jP8UmWy6R6TUUV8bMuC3ZyZ6lZKI56x0tkxyCIqWwRRJ/DgeQKneh/Oid5EoGoPFLrGNkz47ZEtWAYuiY/u9g==}
+    engines: {node: '>=18'}
     hasBin: true
 
   escalade@3.1.2:
@@ -6427,6 +6433,8 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
+  '@vueform/multiselect@2.6.9': {}
+
   '@vueuse/core@10.10.0(vue@3.4.27(typescript@5.4.5))':
     dependencies:
       '@types/web-bluetooth': 0.0.20
@@ -7261,7 +7269,7 @@ snapshots:
       is-date-object: 1.0.5
       is-symbol: 1.0.4
 
-  esbuild-wasm@0.21.5: {}
+  esbuild-wasm@0.23.0: {}
 
   escalade@3.1.2: {}
 
@@ -9786,7 +9794,7 @@ snapshots:
 
   vite@5.2.12(@types/node@20.14.2)(sass@1.77.6):
     dependencies:
-      esbuild: esbuild-wasm@0.21.5
+      esbuild: esbuild-wasm@0.23.0
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
