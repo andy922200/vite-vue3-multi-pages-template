@@ -37,7 +37,23 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: htmlFiles,
+      output: {
+        chunkFileNames() {
+          const date = new Date().toISOString().split('T')[0].replaceAll('-', '')
+
+          return `${projectName}-assets/[name]_${date}_[hash:6].js`
+        },
+        entryFileNames() {
+          const date = new Date().toISOString().split('T')[0].replaceAll('-', '')
+
+          return `${projectName}-assets/[name]_${date}_[hash:6].js`
+        },
+        assetFileNames() {
+          const date = new Date().toISOString().split('T')[0].replaceAll('-', '')
+
+          return `${projectName}-assets/[name]_${date}_[hash:6].[ext]`
+        },
+      },
     },
-    assetsDir: `${projectName}-assets`,
   },
 })
