@@ -24,7 +24,7 @@
 - [Tailwind](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 - [Vue Test Utils](https://test-utils.vuejs.org/guide/) - Vue Test Utils is the official unit testing utility library for Vue.js.
-- [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+- [Vitest](https://vitest.dev/) - A Vite-native testing framework. It's fast!
 - [TestCafe](https://testcafe.io/) - A node.js tool to automate end-to-end web testing
 - [unplugin-icons](https://www.npmjs.com/package/unplugin-icons) - Access thousands of icons as components on-demand universally
 - [vueform/multiselect](https://github.com/vueform/multiselect) - Vue 3 multiselect component with single select, multiselect and tagging options (+Tailwind CSS support)
@@ -69,7 +69,7 @@ $ pnpm lint
 ```
 **5. Execute Unit Testing**
 ```
-$ pnpm test-jest
+$ pnpm test-vitest
 ```
 **6. Execute E2E Testing**
 ```

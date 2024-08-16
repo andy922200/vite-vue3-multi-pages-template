@@ -1,10 +1,10 @@
+import { it, describe, expect, vi, MockInstance } from 'vitest'
 import { overrideAddEventListener } from '@/helpers/non-passive-event-listener'
-
 // Mocking EventTarget's addEventListener
-let originalAddEventListener: jest.SpyInstance | undefined = undefined
+let originalAddEventListener: MockInstance | undefined = undefined
 
 beforeAll(() => {
-  originalAddEventListener = jest.spyOn(EventTarget.prototype, 'addEventListener')
+  originalAddEventListener = vi.spyOn(EventTarget.prototype, 'addEventListener')
   overrideAddEventListener()
 })
 
@@ -15,7 +15,7 @@ afterAll(() => {
 describe('overrideAddEventListener', () => {
   it('should set passive to false by default', () => {
     const element = document.createElement('div')
-    const handler = jest.fn()
+    const handler = vi.fn()
 
     element.addEventListener('click', handler)
 
@@ -25,7 +25,7 @@ describe('overrideAddEventListener', () => {
 
   it('should preserve existing options', () => {
     const element = document.createElement('div')
-    const handler = jest.fn()
+    const handler = vi.fn()
     const options = { capture: true, once: true }
 
     element.addEventListener('click', handler, options)
@@ -39,7 +39,7 @@ describe('overrideAddEventListener', () => {
 
   it('should not change boolean capture options', () => {
     const element = document.createElement('div')
-    const handler = jest.fn()
+    const handler = vi.fn()
 
     element.addEventListener('click', handler, true)
 
@@ -49,7 +49,7 @@ describe('overrideAddEventListener', () => {
 
   it('should allow passive to be set explicitly', () => {
     const element = document.createElement('div')
-    const handler = jest.fn()
+    const handler = vi.fn()
     const options = { passive: true }
 
     element.addEventListener('click', handler, options)
