@@ -1,4 +1,5 @@
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+
 import { setCssVar } from '@/helpers/css-variable'
 import { getSavedLocale } from '@/plugins/i18n/entry'
 

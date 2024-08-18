@@ -1,5 +1,7 @@
-import { createI18n, VueI18n, ExportedGlobalComposer } from 'vue-i18n'
+import { createI18n, ExportedGlobalComposer, VueI18n } from 'vue-i18n'
+
 import { Locales } from '@/types'
+
 import { messages } from './config/index'
 
 export const getSavedLocale = (localStorageKey?: string) => {

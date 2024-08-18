@@ -1,5 +1,6 @@
 import { Selector } from 'testcafe'
-import { projectName, port } from '../../../vite.config.shared'
+
+import { port, projectName } from '../../../vite.config.shared'
 
 fixture('Contact Page').page(`http://localhost:${port}/${projectName}/contact`)
 

@@ -7,9 +7,9 @@ import { setStatesToPinia } from '@/helpers/set-states-to-pinia'
 
 export {
   clearACookie,
-  setCssVar,
   getURLParams,
-  setStatesToPinia,
-  sendInBatches,
   overrideAddEventListener,
+  sendInBatches,
+  setCssVar,
+  setStatesToPinia,
 }

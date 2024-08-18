@@ -1,5 +1,6 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from 'axios' // Original Axios
-import { ref, Ref } from 'vue'
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios' // Original Axios
+import { Ref, ref } from 'vue'
+
 import { axiosInstance } from '@/plugins/axios' // Custom Axios
 
 enum Method {

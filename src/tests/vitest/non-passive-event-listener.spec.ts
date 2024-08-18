@@ -1,4 +1,5 @@
-import { it, describe, expect, vi, MockInstance } from 'vitest'
+import { describe, expect, it, MockInstance, vi } from 'vitest'
+
 import { overrideAddEventListener } from '@/helpers/non-passive-event-listener'
 // Mocking EventTarget's addEventListener
 let originalAddEventListener: MockInstance | undefined = undefined

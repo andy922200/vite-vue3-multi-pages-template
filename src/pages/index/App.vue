@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { getCurrentInstance } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+
 import { LayoutLanguages } from '@/plugins/i18n/config/locales'
 import { saveLocale } from '@/plugins/i18n/entry'
+
 import { useInitApp } from './composables/useInitApp'
 
 const { initApp, currentLocale } = useInitApp()

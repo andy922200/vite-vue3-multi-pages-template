@@ -1,6 +1,6 @@
 <script setup lang="ts" generic="T">
 import Multiselect from '@vueform/multiselect'
-import { ref, computed, withDefaults, defineProps, defineEmits } from 'vue'
+import { computed, defineEmits, defineProps, ref, withDefaults } from 'vue'
 
 const props = withDefaults(
   defineProps<{

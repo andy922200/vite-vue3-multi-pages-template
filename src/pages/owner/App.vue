@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { watch, getCurrentInstance } from 'vue'
+import { getCurrentInstance, watch } from 'vue'
+
 import { saveLocale } from '@/plugins/i18n/entry'
+
 import { useInitApp } from './composables/useInitApp'
 
 const { initApp, currentLocale } = useInitApp()
