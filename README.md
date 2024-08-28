@@ -28,6 +28,7 @@
 - [TestCafe](https://testcafe.io/) - A node.js tool to automate end-to-end web testing
 - [unplugin-icons](https://www.npmjs.com/package/unplugin-icons) - Access thousands of icons as components on-demand universally
 - [vueform/multiselect](https://github.com/vueform/multiselect) - Vue 3 multiselect component with single select, multiselect and tagging options (+Tailwind CSS support)
+- [shadcn-vue](https://www.shadcn-vue.com/) - Build your component library
 
 以及封裝一些實用的 Composable
 with some useful Composable

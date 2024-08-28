@@ -2,6 +2,7 @@
 import { getCurrentInstance, watch } from 'vue'
 
 import { saveLocale } from '@/plugins/i18n/entry'
+import Button from '@/shadcn-vue/ui/button/Button.vue'
 
 import { useInitApp } from './composables/useInitApp'
 
@@ -19,5 +20,6 @@ watch(currentLocale, (newVal) => {
   <div>
     <h1>Owner</h1>
     <p class="text-gray-700">{{ $t('owner') }}</p>
+    <Button @click="() => console.log('trigger~~')">Click Me</Button>
   </div>
 </template>
