@@ -7,6 +7,7 @@ import { useInitApp } from './composables/useInitApp'
 
 const { initApp, currentLocale } = useInitApp()
 const i18NInstance = getCurrentInstance()?.appContext?.config?.globalProperties?.$i18n
+import '@/time-slot-filter-demo'
 
 initApp()
 
