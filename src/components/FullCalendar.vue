@@ -3,6 +3,7 @@ import {
   CalendarApi,
   CalendarOptions,
   DateSelectArg,
+  DatesSetArg,
   EventApi,
   EventClickArg,
   EventInput,
@@ -60,6 +61,7 @@ const emits = defineEmits<{
   'update:currentEvents': [value: EventInput[] | undefined]
   'update:handleEventClick': [value: EventClickArg]
   'update:handleDateSelect': [value: { original: DateSelectArg; calendarApi: CalendarApi }]
+  'update:handleDatesSet': [value: { info: DatesSetArg; calendarApi: CalendarApi }]
 }>()
 
 const calendarLang = computed(() => props.defaultLocale)
@@ -89,6 +91,11 @@ const handleEventDidMount = (info: EventMountArg) => {
     content: info.event.title || '無描述',
     viewMode: info.view.type,
   })
+}
+
+const handleDatesSetTrigger = (info: DatesSetArg) => {
+  const calendarApi = info.view.calendar
+  emits('update:handleDatesSet', { info, calendarApi })
 }
 
 const isFullCalendarPopoverOpen = () => {
@@ -165,6 +172,7 @@ const calendarOptions = ref<CalendarOptions>({
   eventClick: handleEventClick,
   eventsSet: handleEvents,
   eventDidMount: handleEventDidMount,
+  datesSet: handleDatesSetTrigger,
 })
 
 watchEffect(() => {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { CalendarApi, DatesSetArg } from '@fullcalendar/core'
 import { getCurrentInstance, ref, watch } from 'vue'
 
 import { INITIAL_EVENTS } from '@/components/event-utils'
@@ -39,6 +40,19 @@ const generateContentAfterHeader = () => {
 
   return strHtml
 }
+
+const testHandleDatesSet = async ({
+  info,
+  calendarApi,
+}: {
+  info: DatesSetArg
+  calendarApi: CalendarApi
+}) => {
+  const startTime = info.startStr
+  const endTime = info.endStr
+  console.log('testHandleDatesSet', info, calendarApi)
+  console.log('startTime', startTime, 'endTime', endTime)
+}
 </script>
 
 <template>
@@ -50,6 +64,7 @@ const generateContentAfterHeader = () => {
         v-model:current-events="eventCollection"
         default-locale="zh-tw"
         :content-after-header="generateContentAfterHeader()"
+        @update:handle-dates-set="testHandleDatesSet"
       />
     </div>
   </div>
