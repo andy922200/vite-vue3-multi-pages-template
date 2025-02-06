@@ -40,8 +40,9 @@ initApp()
         <a
           class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
           href="./owner"
-          >Owner Page</a
         >
+          Owner Page
+        </a>
       </nav>
     </div>
 

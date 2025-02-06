@@ -18,6 +18,8 @@ watch(currentLocale, (newVal) => {
 <template>
   <div>
     <h1>Owner</h1>
-    <p class="text-gray-700">{{ $t('owner') }}</p>
+    <p class="text-gray-700">
+      {{ $t('owner') }}
+    </p>
   </div>
 </template>
