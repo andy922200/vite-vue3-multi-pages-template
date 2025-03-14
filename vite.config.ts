@@ -9,6 +9,7 @@ import zipPack from 'vite-plugin-zip-pack'
 import svgLoader from 'vite-svg-loader'
 import { defineConfig } from 'vitest/config'
 
+import { useHttpsConfig } from './useHttpsConfig'
 import { htmlFiles, port, projectName } from './vite.config.shared'
 
 // https://vitejs.dev/config/
@@ -35,6 +36,7 @@ export default defineConfig({
   },
   server: {
     port,
+    https: useHttpsConfig() || undefined,
   },
   build: {
     rollupOptions: {
