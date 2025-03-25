@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { dirname, resolve } from 'path'
 import Icons from 'unplugin-icons/vite'
@@ -18,6 +19,7 @@ export default defineConfig({
   plugins: [
     vue(),
     topLevelAwait(),
+    tailwindcss(),
     VueI18nVitePlugin({
       include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
     }),

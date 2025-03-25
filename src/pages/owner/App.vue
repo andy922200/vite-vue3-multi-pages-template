@@ -17,9 +17,27 @@ watch(currentLocale, (newVal) => {
 
 <template>
   <div>
-    <h1>Owner</h1>
-    <p class="text-gray-700">
+    <h1>Owner <span>inner</span></h1>
+    <p class="text-class">
       {{ $t('owner') }}
     </p>
   </div>
 </template>
+
+<style scoped>
+/* for using tailwindcss v4*/
+@reference "@/assets/base.css";
+
+.text-class {
+  @apply text-gray-700;
+}
+</style>
+
+<style scoped lang="scss">
+/* for scss */
+h1 {
+  span {
+    color: red;
+  }
+}
+</style>
