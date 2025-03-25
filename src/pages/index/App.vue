@@ -17,13 +17,13 @@ initApp()
   <header class="line-height[1.5] max-h-screen justify-center lg:flex lg:items-center">
     <img
       alt="Vue logo"
-      class="mx-auto mb-8 block size-32 lg:mx-0 lg:mb-0 lg:mr-8"
+      class="mx-auto mb-8 block size-32 lg:mx-0 lg:mr-8 lg:mb-0"
       src="@/assets/logo.svg?url"
     />
 
     <div class="wrapper lg:flex lg:flex-wrap lg:items-start">
       <nav
-        class="mt-8 w-full text-center text-sm lg:-ml-4 lg:mt-4 lg:py-4 lg:text-left lg:text-base"
+        class="mt-8 w-full text-center text-sm lg:mt-4 lg:-ml-4 lg:py-4 lg:text-left lg:text-base"
       >
         <RouterLink
           class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
