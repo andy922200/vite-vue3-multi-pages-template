@@ -10,7 +10,7 @@ import zipPack from 'vite-plugin-zip-pack'
 import svgLoader from 'vite-svg-loader'
 import { defineConfig } from 'vitest/config'
 
-import { useHttpsConfig } from './useHttpsConfig'
+import { useHttpsConfig } from './src/composables/useHttpsConfig'
 import { htmlFiles, port, projectName } from './vite.config.shared'
 
 // https://vitejs.dev/config/
@@ -44,6 +44,19 @@ export default defineConfig({
     rollupOptions: {
       input: htmlFiles,
       output: {
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('axios')) return 'axios'
+            if (id.includes('dayjs')) return 'dayjs'
+            if (id.includes('lodash-es')) return 'lodash'
+            if (id.includes('exceljs')) return 'exceljs'
+            if (id.includes('wangeditor')) return 'wangeditor'
+            if (id.includes('heic-convert')) return 'heic-convert'
+            if (id.includes('air-datepicker')) return 'air-datepicker'
+            if (id.includes('libheif-js')) return 'libheif-js'
+            return 'vendor'
+          }
+        },
         chunkFileNames() {
           const date = new Date().toISOString().split('T')[0].replaceAll('-', '')
 
