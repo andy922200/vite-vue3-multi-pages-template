@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { getCurrentInstance } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 
-import { LayoutLanguages } from '@/plugins/i18n/config/locales'
-import { saveLocale } from '@/plugins/i18n/entry'
+import { useLanguage } from '@/composables/useLanguage'
+import { LayoutLanguages } from '@/plugins/i18n'
 
 import { useInitApp } from './composables/useInitApp'
 
-const { initApp, currentLocale } = useInitApp()
-const i18NInstance = getCurrentInstance()?.appContext?.config?.globalProperties?.$i18n
+const { initApp } = useInitApp()
+const { currentLanguage, setLanguage } = useLanguage()
 
 initApp()
 </script>
@@ -46,7 +45,7 @@ initApp()
       </nav>
     </div>
 
-    <select v-model="currentLocale" @change="saveLocale(currentLocale, i18NInstance, 'locale')">
+    <select v-model="currentLanguage" @change="setLanguage(currentLanguage)">
       <option v-for="item in LayoutLanguages" :key="item.param" :value="item.param">
         {{ item.title }}
       </option>

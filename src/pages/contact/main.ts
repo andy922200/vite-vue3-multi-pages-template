@@ -6,7 +6,7 @@ import { createApp } from 'vue'
 
 import { overrideAddEventListener } from '@/helpers'
 overrideAddEventListener() // Avoid scroll-blocking 'touchstart' event warning on Google-Chrome
-import i18n from '@/plugins/i18n/entry'
+import i18n from '@/plugins/i18n'
 
 import App from './App.vue'
 

@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { getCurrentInstance, watch } from 'vue'
+import { watch } from 'vue'
 
-import { saveLocale } from '@/plugins/i18n/entry'
+import { useLanguage } from '@/composables/useLanguage'
 
 import { useInitApp } from './composables/useInitApp'
 
-const { initApp, currentLocale } = useInitApp()
-const i18NInstance = getCurrentInstance()?.appContext?.config?.globalProperties?.$i18n
+const { initApp } = useInitApp()
+const { currentLanguage, setLanguage } = useLanguage()
 
 initApp()
 
-watch(currentLocale, (newVal) => {
-  saveLocale(newVal, i18NInstance, 'locale')
+watch(currentLanguage, (newVal) => {
+  setLanguage(newVal)
 })
 </script>
 

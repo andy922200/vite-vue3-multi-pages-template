@@ -40,7 +40,6 @@ const postRequest = async ({
   data?: Record<string, any>
   config?: AxiosRequestConfig
   isAbsolutePath: boolean
-  isOwnerPath?: boolean
 }): Promise<[AxiosResponse<any, any> | null, any]> => {
   try {
     const res = isAbsolutePath
@@ -67,7 +66,6 @@ export const useFetchData = async ({
   config?: AxiosRequestConfig
   method: Method
   isAbsolutePath?: boolean
-  isOwnerPath?: boolean
 }): Promise<{ isFetching: Ref<boolean>; result: [AxiosResponse<any, any> | null, any] }> => {
   const isFetching = ref(false)
 

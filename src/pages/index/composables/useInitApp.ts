@@ -1,11 +1,9 @@
 import { onMounted, ref } from 'vue'
 
 import { setCssVar } from '@/helpers/css-variable'
-import { getSavedLocale } from '@/plugins/i18n/entry'
 
 export function useInitApp() {
   const isReady = ref(false)
-  const currentLocale = ref(getSavedLocale())
 
   async function initApp() {
     try {
@@ -23,6 +21,5 @@ export function useInitApp() {
   return {
     isReady,
     initApp,
-    currentLocale,
   }
 }
