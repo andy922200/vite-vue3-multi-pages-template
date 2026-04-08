@@ -11,10 +11,10 @@
     "strict": true,
     "useDefineForClassFields": true,
     "esModuleInterop": true,
+    "noUncheckedSideEffectImports": false,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./*"]

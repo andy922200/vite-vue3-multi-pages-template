@@ -5,7 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { dirname, resolve } from 'path'
 import Icons from 'unplugin-icons/vite'
-import topLevelAwait from 'vite-plugin-top-level-await'
 import zipPack from 'vite-plugin-zip-pack'
 import svgLoader from 'vite-svg-loader'
 import { defineConfig } from 'vitest/config'
@@ -18,7 +17,6 @@ export default defineConfig({
   base: `/${projectName}/`,
   plugins: [
     vue(),
-    topLevelAwait(),
     tailwindcss(),
     VueI18nVitePlugin({
       include: [resolve(dirname(fileURLToPath(import.meta.url)), './plugins/lang/*.ts')],
@@ -42,7 +40,7 @@ export default defineConfig({
     https: useHttpsConfig() || undefined,
   },
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       input: htmlFiles,
       output: {
         manualChunks: (id) => {
@@ -82,7 +80,6 @@ export default defineConfig({
     setupFiles: './src/tests/vitest/setup.ts',
     include: ['./src/tests/vitest/**/*.(spec|test).ts'],
     coverage: {
-      all: false,
       enabled: true,
       reporter: ['text', 'json', 'html'],
     },

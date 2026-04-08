@@ -17,7 +17,6 @@ export const useAirDatepickerUtils = () => {
     updateOptions: Record<string, any>
   }) => {
     if (!comparisonDate || comparisonFn(dayjs(comparisonDate), dayjs(dateValue))) {
-      comparisonDate = dateValue
       instance?.selectDate(dateValue)
     }
 
