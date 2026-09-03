@@ -36,10 +36,12 @@ export const LayoutLanguages: I18nLanguage[] = [
 ]
 
 export const appLangs = Object.keys(messages)
+export const defaultLocalStorageKey = 'lang'
 export type appLangType = keyof typeof messages
+
 export const i18n = createI18n({
   legacy: false,
-  locale: localStorage.getItem('gobooking-lang') ?? LocaleMap.zhTw,
+  locale: localStorage.getItem(defaultLocalStorageKey) ?? LocaleMap.zhTw,
   globalInjection: true,
   fallbackLocale: LocaleMap.zhTw,
   messages,
