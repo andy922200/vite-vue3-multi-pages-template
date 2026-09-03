@@ -9,8 +9,8 @@ import zipPack from 'vite-plugin-zip-pack'
 import svgLoader from 'vite-svg-loader'
 import { defineConfig } from 'vitest/config'
 
-import { useHttpsConfig } from './src/composables/useHttpsConfig'
-import { htmlFiles, port, projectName } from './vite.config.shared'
+import { useHttpsConfig } from './src/composables/useHttpsConfig.ts'
+import { htmlFiles, port, projectName } from './vite.config.shared.ts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
