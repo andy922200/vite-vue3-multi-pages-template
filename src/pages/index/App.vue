@@ -25,19 +25,19 @@ initApp()
         class="mt-8 w-full text-center text-sm lg:mt-4 lg:-ml-4 lg:py-4 lg:text-left lg:text-base"
       >
         <RouterLink
-          class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
+          class="inline-block border-l border-(--color-border) px-4 first-of-type:border-0"
           to="/"
         >
           Home
         </RouterLink>
         <RouterLink
-          class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
+          class="inline-block border-l border-(--color-border) px-4 first-of-type:border-0"
           to="/about"
         >
           About
         </RouterLink>
         <a
-          class="inline-block border-l border-[var(--color-border)] px-4 first-of-type:border-0"
+          class="inline-block border-l border-(--color-border) px-4 first-of-type:border-0"
           href="./owner"
         >
           Owner Page
