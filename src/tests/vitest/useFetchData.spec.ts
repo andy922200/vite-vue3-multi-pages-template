@@ -1,6 +1,6 @@
 import type { AxiosResponse } from 'axios'
-import type { Ref } from 'vue'
 import { beforeEach, describe, expect, expectTypeOf, it, vi } from 'vitest'
+import type { Ref } from 'vue'
 
 const axiosMocks = vi.hoisted(() => ({
   defaultGet: vi.fn(),
